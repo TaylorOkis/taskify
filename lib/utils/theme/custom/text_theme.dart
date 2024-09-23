@@ -11,10 +11,10 @@ class TaskifyTextTheme {
       fontWeight: FontWeight.w600,
       color: TaskifyColors.darkText,
     ),
-    titleMedium: TextStyle(
+    titleLarge: TextStyle(
       fontSize: 17,
       fontWeight: FontWeight.w500,
-      color: TaskifyColors.darkText,
+      color: TaskifyColors.lightText,
     ),
     bodyMedium: TextStyle(
       fontSize: 17,
@@ -29,7 +29,7 @@ class TaskifyTextTheme {
       fontWeight: FontWeight.w600,
       color: TaskifyColors.lightText,
     ),
-    titleMedium: TextStyle(
+    titleLarge: TextStyle(
       fontSize: 17,
       fontWeight: FontWeight.w500,
       color: TaskifyColors.lightText,
