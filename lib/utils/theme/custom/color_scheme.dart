@@ -12,7 +12,7 @@ class TaskifyColorScheme {
     tertiary: TaskifyColors.tertiaryColor,
   );
 
-  static const ColorScheme darkColorScheme = ColorScheme.light(
+  static const ColorScheme darkColorScheme = ColorScheme.dark(
     surface: TaskifyColors.darkBackgroundColor,
     primary: TaskifyColors.primaryColor,
     secondary: TaskifyColors.secondaryColor,

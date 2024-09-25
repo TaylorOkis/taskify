@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../utils/constants/colors.dart';
 import '../../utils/constants/sizes.dart';
+import '../widgets/custom_floating_action_button.dart';
 import '../widgets/section_header.dart';
 import '../widgets/task_list.dart';
 
@@ -13,12 +14,11 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  bool? isChecked = false;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
+      floatingActionButton: const CustomFloatingActionButton(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
