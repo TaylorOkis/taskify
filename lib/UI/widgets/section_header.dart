@@ -26,26 +26,24 @@ class SectionHeader extends StatelessWidget {
         padding: const EdgeInsets.symmetric(
           horizontal: TaskifySizes.xSmall,
         ),
-        child: Expanded(
-          child: Row(
-            children: [
-              const Icon(
-                Icons.keyboard_arrow_right,
-                size: TaskifySizes.xLarge,
-                color: TaskifyColors.lightText,
-              ),
-              const SizedBox(width: TaskifySizes.xsSmall),
-              Text(
-                title,
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-              const SizedBox(width: TaskifySizes.small),
-              Text(
-                '4',
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-            ],
-          ),
+        child: Row(
+          children: [
+            const Icon(
+              Icons.keyboard_arrow_right,
+              size: TaskifySizes.xLarge,
+              color: TaskifyColors.lightText,
+            ),
+            const SizedBox(width: TaskifySizes.xsSmall),
+            Text(
+              title,
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
+            const SizedBox(width: TaskifySizes.small),
+            Text(
+              '4',
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
+          ],
         ),
       ),
     );

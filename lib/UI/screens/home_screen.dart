@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
 
+import '../../utils/constants/colors.dart';
 import '../../utils/constants/sizes.dart';
 import '../widgets/section_header.dart';
+import '../widgets/task_list.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  bool? isChecked = false;
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +37,20 @@ class HomeScreen extends StatelessWidget {
                   title: 'Incomplete',
                   color: Theme.of(context).colorScheme.primary,
                 ),
+                const SizedBox(height: TaskifySizes.large),
+                const TaskList(),
+                const SizedBox(height: TaskifySizes.xsLarge),
+                const Divider(
+                  thickness: TaskifySizes.xsSmall / 3.5,
+                  color: TaskifyColors.lightGrey,
+                ),
                 const SizedBox(height: TaskifySizes.xsLarge),
                 SectionHeader(
                   title: 'Completed',
                   color: Theme.of(context).colorScheme.tertiary,
-                )
+                ),
+                const SizedBox(height: TaskifySizes.large),
+                const TaskList(),
               ],
             ),
           ),
