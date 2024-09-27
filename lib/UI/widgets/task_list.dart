@@ -21,7 +21,7 @@ class TaskList extends StatelessWidget {
           minTileHeight: 60,
         );
       },
-      itemCount: 9,
+      itemCount: 20,
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
     );

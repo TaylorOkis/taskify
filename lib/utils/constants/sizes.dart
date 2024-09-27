@@ -9,6 +9,5 @@ class TaskifySizes {
   static const double xsLarge = 32.0;
 
   static const double appBarHeight = 45;
-  static const double sectionHeaderHeight = 40.0;
-  static const double sectionHeaderWidth = 145.0;
+  static const double sectionHeaderHeight = 43.0;
 }

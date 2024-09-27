@@ -41,6 +41,8 @@ class AddTaskScreen extends StatelessWidget {
                       borderSide: const BorderSide(width: 1),
                       borderRadius: BorderRadius.circular(TaskifySizes.xSmall),
                     ),
+                    labelText: 'Name',
+                    // hintText: 'Name',
                   ),
                 ),
               ],

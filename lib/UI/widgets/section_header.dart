@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taskify/utils/device/device_utility.dart';
 
 import '../../utils/constants/colors.dart';
 import '../../utils/constants/sizes.dart';
@@ -18,7 +19,7 @@ class SectionHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: TaskifySizes.sectionHeaderWidth,
+      width: TaskifyDeviceUtils.getScreenWidth(context) * 0.45,
       height: TaskifySizes.sectionHeaderHeight,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(TaskifySizes.xsSmall),
