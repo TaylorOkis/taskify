@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taskify/UI/screens/add_task_screen.dart';
 
 import '../../utils/constants/colors.dart';
 import '../../utils/constants/sizes.dart';
@@ -15,7 +16,12 @@ class CustomFloatingActionButton extends StatelessWidget {
       width: 70,
       child: FittedBox(
         child: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const AddTaskScreen(),
+            ),
+          ),
           backgroundColor: TaskifyColors.primaryColor,
           foregroundColor: TaskifyColors.darkBackgroundColor,
           elevation: 1,

@@ -8,10 +8,12 @@ class SectionHeader extends StatelessWidget {
     super.key,
     required this.color,
     required this.title,
+    required this.show,
   });
 
   final Color color;
   final String title;
+  final bool show;
 
   @override
   Widget build(BuildContext context) {
@@ -28,8 +30,8 @@ class SectionHeader extends StatelessWidget {
         ),
         child: Row(
           children: [
-            const Icon(
-              Icons.keyboard_arrow_right,
+            Icon(
+              show ? Icons.keyboard_arrow_down : Icons.keyboard_arrow_right,
               size: TaskifySizes.xLarge,
               color: TaskifyColors.lightText,
             ),
