@@ -1,24 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../utils/constants/colors.dart';
 import '../../utils/constants/sizes.dart';
 
-class AltSectionHeader extends StatelessWidget {
+class AltSectionHeader extends ConsumerWidget {
   const AltSectionHeader({
     super.key,
     required this.color,
     required this.title,
+    required this.tasksLength,
     required this.show,
   });
 
   final Color color;
   final String title;
   final bool show;
+  final int tasksLength;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Container(
-      // width: TaskifyDeviceUtils.getScreenWidth(context) * 0.45,
       height: TaskifySizes.sectionHeaderHeight,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(TaskifySizes.xLarge),
@@ -30,7 +32,7 @@ class AltSectionHeader extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              '$title  4',
+              '$title: $tasksLength',
               style: show
                   ? Theme.of(context).textTheme.titleLarge
                   : Theme.of(context)
@@ -38,11 +40,6 @@ class AltSectionHeader extends StatelessWidget {
                       .titleLarge!
                       .copyWith(color: TaskifyColors.darkText),
             ),
-            // const SizedBox(width: TaskifySizes.small),
-            // Text(
-            //   '4',
-            //   style: Theme.of(context).textTheme.titleLarge,
-            // ),
           ],
         ),
       ),

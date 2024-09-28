@@ -21,6 +21,14 @@ class UiProvider extends ChangeNotifier {
     }
     notifyListeners();
   }
+
+  final TextEditingController _controller = TextEditingController();
+  TextEditingController get controller => _controller;
+  String get controllerText => _controller.text;
+  void setText(String text) {
+    _controller.text = text;
+    notifyListeners();
+  }
 }
 
 
