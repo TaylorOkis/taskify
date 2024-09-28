@@ -25,7 +25,7 @@ class HomeScreen extends ConsumerWidget {
           child: Padding(
             padding: const EdgeInsets.only(
               top: TaskifySizes.appBarHeight,
-              bottom: TaskifySizes.large,
+              bottom: TaskifySizes.appBarHeight * 2,
               left: TaskifySizes.large,
               right: TaskifySizes.large,
             ),
@@ -64,11 +64,17 @@ class HomeScreen extends ConsumerWidget {
                 const SizedBox(height: TaskifySizes.large),
                 Visibility(
                   visible: ref.watch(showProvider).showInComplete,
-                  child: const TaskList(),
+                  child: const TaskList(
+                    key: Key('incompleteTasks'),
+                    showEditIcon: true,
+                  ),
                 ),
                 Visibility(
                   visible: ref.watch(showProvider).showCompleted,
-                  child: const TaskList(),
+                  child: const TaskList(
+                    key: Key('completedTasks'),
+                    showEditIcon: false,
+                  ),
                 ),
 
                 // GestureDetector(

@@ -19,8 +19,9 @@ class AddTaskScreen extends StatelessWidget {
             child: const Text(
               'Done',
               style: TextStyle(
-                  color: TaskifyColors.primaryColor,
-                  fontSize: TaskifySizes.regular),
+                color: TaskifyColors.primaryColor,
+                fontSize: TaskifySizes.regular,
+              ),
             ),
             onPressed: () {
               Navigator.pop(context);

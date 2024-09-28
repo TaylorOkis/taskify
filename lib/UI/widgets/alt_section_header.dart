@@ -22,7 +22,7 @@ class AltSectionHeader extends StatelessWidget {
       height: TaskifySizes.sectionHeaderHeight,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(TaskifySizes.xLarge),
-        border: show ? Border.all(width: 0) : Border.all(width: 1.0),
+        border: show ? Border.all(width: 0.0) : Border.all(width: 0.0),
         color: show ? color : TaskifyColors.lightBackgroundColor,
       ),
       child: Center(
