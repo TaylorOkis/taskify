@@ -23,22 +23,21 @@ class AddTaskScreen extends ConsumerWidget {
         actions: [
           TextButton(
             onPressed: () {
-              if (edit == true && id != null) {
-                final updateTask = Task(
-                  name: ref.watch(showProvider).controllerText,
-                  completed: false,
-                );
+              final text = ref.watch(showProvider).controllerText;
+
+              if (edit == true && id != null && text.isNotEmpty) {
+                final updateTask = Task(name: text, completed: false);
                 ref
                     .read(taskNotifierProvider.notifier)
                     .updateTask(id!, updateTask);
                 ref.read(showProvider).setText('');
                 Navigator.pop(context);
-              } else {
-                final newTask = Task(
-                    name: ref.watch(showProvider).controllerText,
-                    completed: false);
+              } else if (text.isNotEmpty) {
+                final newTask = Task(name: text, completed: false);
                 ref.read(taskNotifierProvider.notifier).addTask(newTask);
                 ref.read(showProvider).setText('');
+                Navigator.pop(context);
+              } else {
                 Navigator.pop(context);
               }
             },
